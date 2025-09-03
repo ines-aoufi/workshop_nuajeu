@@ -1,3 +1,60 @@
+.text__menu-desktop {
+  display: none;
+}
 
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  background-color: var(--color-white);
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 25px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .text__menu-desktop {
+    display: block;
+  }
+  header {
+    width: 100%;
+    margin: 0;
+  }
+  header nav {
+    position: relative;
+    width: fit-content;
+    margin-top: 70px;
+  }
+  header nav ul li a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--color-purple);
+  }
+  header nav ul li a p {
+    font-weight: bold;
+  }
+}
 
 /*# sourceMappingURL=header.css.map */

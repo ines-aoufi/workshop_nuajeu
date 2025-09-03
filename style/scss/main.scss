@@ -1,0 +1,16 @@
+:root {
+  --color-blue: #B9E0F8;
+  --color-orange: #F59D59;
+  --color-white : #FFFFFF;
+  --color-purple : #6D2985;
+  --color-pink : #D852B9;
+  
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+}
+
+body {
+    background-color: var(--color-blue);
+}
+
