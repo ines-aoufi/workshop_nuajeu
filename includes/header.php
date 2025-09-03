@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/css/main.css">
     <link rel="stylesheet" href="style/css/collection.css">
     <link rel="stylesheet" href="style/css/booster.css">
+    <link rel="stylesheet" href="style/css/login.css">
 
     <title>Workshop Nuajeu</title>
 </head>
@@ -28,7 +29,7 @@
                         </svg>
                         <p class="text__menu-desktop">Accueil</p>
                     </a></li>
-                    
+
                 <li><a href="booster.php">
                         <svg width="35" height="35" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.2143 36.4C6.12538 36.4 2 32.3232 2 27.2941C2 22.265 6.12538 18.1882 11.2143 18.1882C11.8251 18.1882 12.4221 18.2469 12.9997 18.3591M12.9997 18.3591C12.5072 17.0453 12.2381 15.6243 12.2381 14.1412C12.2381 7.43578 17.7386 2 24.5238 2C30.8442 2 36.0498 6.71648 36.7335 12.7822M12.9997 18.3591C14.2133 18.5946 15.3414 19.0654 16.3333 19.7216M28.6192 12.8085C29.8999 12.3611 31.2783 12.1176 32.7143 12.1176C34.1219 12.1176 35.474 12.3516 36.7335 12.7822M36.7335 12.7822C41.545 14.4275 45 18.9444 45 24.2587C45 30.0788 40.8561 34.9425 35.325 36.1252" stroke="#6D2985" stroke-width="3.225" stroke-linecap="round" />
@@ -48,4 +49,31 @@
                     </a></li>
             </ul>
         </nav>
+
+        <?php
+        require 'db.php';
+
+        try {
+            // Requête pour récupérer toutes les cartes
+            $stmt = $pdo->query("SELECT * FROM carte");
+
+            // Vérifier qu'il y a des résultats
+            $cartes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            die("Erreur lors de la récupération des cartes : " . $e->getMessage());
+        }
+        ?>
+
+        <ul style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <?php foreach ($cartes as $carte): ?>
+            <li>
+                <?= htmlspecialchars($carte['name']) ?>
+                (Rareté : <?= htmlspecialchars($carte['rarity']) ?>,
+                Catégorie : <?= htmlspecialchars($carte['category']) ?>,
+                Taille : <?= htmlspecialchars($carte['size']) ?>)
+            </li>
+            <?php endforeach; ?>
+        </ul>
+
+        
     </header>
