@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style/css/footer.css">
     <link rel="stylesheet" href="style/css/main.css">
     <link rel="stylesheet" href="style/css/collection.css">
-    <link rel="stylesheet" href="style/css/booster.css">
+    <link rel="stylesheet" href="style/css/boosters.css">
     <link rel="stylesheet" href="style/css/login.css">
 
     <title>Workshop Nuajeu</title>
@@ -30,7 +30,7 @@
                         <p class="text__menu-desktop">Accueil</p>
                     </a></li>
 
-                <li><a href="booster.php">
+                <li><a href="boosters.php">
                         <svg width="35" height="35" viewBox="0 0 47 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.2143 36.4C6.12538 36.4 2 32.3232 2 27.2941C2 22.265 6.12538 18.1882 11.2143 18.1882C11.8251 18.1882 12.4221 18.2469 12.9997 18.3591M12.9997 18.3591C12.5072 17.0453 12.2381 15.6243 12.2381 14.1412C12.2381 7.43578 17.7386 2 24.5238 2C30.8442 2 36.0498 6.71648 36.7335 12.7822M12.9997 18.3591C14.2133 18.5946 15.3414 19.0654 16.3333 19.7216M28.6192 12.8085C29.8999 12.3611 31.2783 12.1176 32.7143 12.1176C34.1219 12.1176 35.474 12.3516 36.7335 12.7822M36.7335 12.7822C41.545 14.4275 45 18.9444 45 24.2587C45 30.0788 40.8561 34.9425 35.325 36.1252" stroke="#6D2985" stroke-width="3.225" stroke-linecap="round" />
                             <path d="M23.5 19L25.1686 25.1971C25.3721 25.9533 25.474 26.3314 25.6749 26.6406C25.8527 26.9141 26.0859 27.1473 26.3595 27.3251C26.6685 27.526 27.0467 27.6279 27.8029 27.8314L34 29.5L27.8029 31.1686C27.0467 31.3721 26.6685 31.474 26.3595 31.6749C26.0859 31.8527 25.8527 32.0859 25.6749 32.3595C25.474 32.6685 25.3721 33.0467 25.1686 33.8029L23.5 40L21.8314 33.8029C21.6279 33.0467 21.526 32.6685 21.3251 32.3595C21.1473 32.0859 20.9141 31.8527 20.6406 31.6749C20.3314 31.474 19.9533 31.3721 19.1971 31.1686L13 29.5L19.1971 27.8314C19.9533 27.6279 20.3314 27.526 20.6406 27.3251C20.9141 27.1473 21.1473 26.9141 21.3251 26.6406C21.526 26.3314 21.6279 25.9533 21.8314 25.1971L23.5 19Z" stroke="#6D2985" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -66,14 +66,14 @@
 
         <ul style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <?php foreach ($cartes as $carte): ?>
-            <li>
-                <?= htmlspecialchars($carte['name']) ?>
-                (Rareté : <?= htmlspecialchars($carte['rarity']) ?>,
-                Catégorie : <?= htmlspecialchars($carte['category']) ?>,
-                Taille : <?= htmlspecialchars($carte['size']) ?>)
-            </li>
+                <li>
+                    <?= htmlspecialchars($carte['name']) ?>
+                    (Rareté : <?= htmlspecialchars($carte['rarity']) ?>,
+                    Catégorie : <?= htmlspecialchars($carte['category']) ?>,
+                    Taille : <?= htmlspecialchars($carte['size']) ?>)
+                </li>
             <?php endforeach; ?>
         </ul>
 
-        
+
     </header>
