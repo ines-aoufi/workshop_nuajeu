@@ -1,5 +1,75 @@
-
-
 #login {
-    /* Vos styles ici */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
+#login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#login input[type="text"] {
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  border: none;
+}
+
+#login input[type="text"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#login button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #8e44ad;
+    cursor: pointer;
+  }
+}
+
+#login form {
+  background-color: var(--color-blue);
+}
+
+#login input[type="text"]::placeholder {
+  color: var(--color-purple);
+  opacity: 0.69;
+  font-weight: bold;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .input-wrapper svg {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }

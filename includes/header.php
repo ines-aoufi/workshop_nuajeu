@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="style/css/boosters.css">
     <link rel="stylesheet" href="style/css/login.css">
 
+    <!-- Liens vers les polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+
     <title>Workshop Nuajeu</title>
 </head>
 
