@@ -14,6 +14,8 @@ body {
   background-color: var(--color-blue);
   font-family: var(--font-family);
   color: var(--color-purple);
+  margin: 0;
+  padding: 0;
 }
 
 .container {
