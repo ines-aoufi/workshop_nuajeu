@@ -1,7 +1,3 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
-
 <?php
 
 session_start();
@@ -21,6 +17,15 @@ include 'includes/header.php';
 ?>
 
 <h1 style="margin-top: 50px; text-align: center;">Bonjour, <?php echo htmlspecialchars($username); ?></h1>
+
+<div class="container__index">
+    <div class="booster-wrapper">
+        <img src="assets/images/booster-pokemon.png" alt="Booster Pokémon" class="booster">
+        <img src="assets/images/etoile-blanche.png" alt="Étoile blanche" class="etoile">
+    </div>
+</div>
+
+
 
 <?php
 include 'includes/footer.php';

@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+#login form {
+  background-color: var(--color-blue);
+}
+
 #login input[type=text]::placeholder {
   color: var(--color-purple);
   opacity: 0.69;
