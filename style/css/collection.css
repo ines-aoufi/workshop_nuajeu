@@ -1,5 +1,40 @@
 img {
   width: 200px;
+  border-radius: 3%;
+}
+
+section {
+  background-color: var(--color-white);
+  width: 80%;
+  border-radius: 10px;
+}
+
+.list-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style-type: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  align-self: flex-end;
+  padding: 6px;
+  margin: 0;
+  width: fit-content;
+  border-radius: 50px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  background-color: var(--color-pink);
+  color: var(--color-white);
 }
 
 /*# sourceMappingURL=collection.css.map */
