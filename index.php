@@ -1,35 +1,23 @@
 <?php
 
-    include 'includes/header.php';
+session_start();
 
-    require 'includes/db.php';
+require 'includes/db.php';
 
-    try {
-        // Requête pour récupérer toutes les cartes
-        $stmt = $pdo->query("SELECT * FROM carte");
+// Si l'utilisateur n'est pas connecté, on le redirige vers login.php
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
 
-        // Vérifier qu'il y  a des résultats
-        $cartes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        die("Erreur lors de la récupération des cartes : " . $e->getMessage());
-    }
+// Si connecté, récupérer le nom
+$username = $_SESSION['username'];
 
-    ?>
+include 'includes/header.php';
+?>
 
-
-    <ul style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <?php foreach ($cartes as $carte): ?>
-            <li>
-                <?= htmlspecialchars($carte['name']) ?>
-                (Rareté : <?= htmlspecialchars($carte['rarity']) ?>,
-                Catégorie : <?= htmlspecialchars($carte['category']) ?>,
-                Taille : <?= htmlspecialchars($carte['size']) ?>)
-            </li>
-        <?php endforeach; ?>
-    </ul>
-
-
+<h1 style="margin-top: 50px; text-align: center;">Bonjour, <?php echo htmlspecialchars($username); ?></h1>
 
 <?php
-    include 'includes/footer.php';
+include 'includes/footer.php';
 ?>
