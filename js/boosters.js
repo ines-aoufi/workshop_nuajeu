@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname.includes("boosters.php")) {
+  if (
+    window.location.pathname.includes("boosters.php") &&
+    window.matchMedia("(min-width: 768px)").matches
+  ) {
     document.body.style.overflowY = "hidden";
   }
 
