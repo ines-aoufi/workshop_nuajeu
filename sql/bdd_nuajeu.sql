@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 04 sep. 2025 à 14:39
+-- Généré le : ven. 05 sep. 2025 à 08:09
 -- Version du serveur : 5.7.24
 -- Version de PHP : 8.3.1
 
@@ -53,7 +53,7 @@ INSERT INTO `carte` (`id`, `name`, `rarity`, `category`, `size`) VALUES
 (11, 'nuage_heureux', 'common', 'humeur', 800),
 (12, 'nuage_triste', 'common', 'humeur', 800),
 (13, 'prout', 'rare', 'troll', 0.2),
-(14, 'tete_dans_les_nuages', 'common', 'nuajeu de mots', 0.3),
+(14, 'tete_dans_les_nuages', 'common', 'nuajeu de mots', 0.3);
 
 -- --------------------------------------------------------
 
@@ -111,19 +111,19 @@ ALTER TABLE `user_collection`
 -- AUTO_INCREMENT pour la table `carte`
 --
 ALTER TABLE `carte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `user_collection`
 --
 ALTER TABLE `user_collection`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Contraintes pour les tables déchargées
