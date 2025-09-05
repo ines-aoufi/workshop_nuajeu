@@ -17,11 +17,12 @@ h1 {
   gap: 10px;
 }
 
-section {
+.container-collection {
   background-color: var(--color-white);
   width: 90%;
   border-radius: 10px;
   padding: 40px;
+  margin-top: 10px !important;
 }
 
 .list-cards {
@@ -44,6 +45,10 @@ section {
   .list-cards {
     column-gap: 6%;
     grid-template-columns: 47% 47%;
+  }
+  .container {
+    padding: 20px;
+    padding-bottom: 100px;
   }
 }
 .card {

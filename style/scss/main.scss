@@ -1,3 +1,12 @@
+html {
+    visibility: hidden;
+    font-family: 'Baloo 2', cursive, sans-serif;
+}
+
+html.font-loaded {
+    visibility: visible;
+}
+
 :root {
   --color-blue: #B9E0F8;
   --color-orange: #F59D59;
@@ -28,7 +37,13 @@ body {
     justify-content: center;
 }
 
+.logo{
+  display: block;
+  margin: 50px;
+  width: 200px;
+}
 .container__index{
+  display: block;
   margin-top: 50px;
   width: 100%;
 }
