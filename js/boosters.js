@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("boosters.php")) {
+    document.body.style.overflowY = "hidden";
+  }
 
   const booster = document.querySelector(".booster");
   const etoile = document.querySelector(".etoile");
@@ -37,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
               btnOuvrir.style.display = "block";
               booster.style.opacity = "1";
               booster.classList.remove("shake-fast"); // reset animation
+              form.style.display = "block";
             });
           }
         });
@@ -76,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         booster.style.opacity = 0;
         etoile.style.opacity = 0;
         etoile.style.display = "none";
+        form.style.display = "none";
         clearInterval(interval);
         if (callback) callback();
       }

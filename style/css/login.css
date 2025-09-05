@@ -79,4 +79,10 @@
   padding: 5px;
 }
 
+.logo {
+  display: block;
+  margin: 50px;
+  width: 200px;
+}
+
 /*# sourceMappingURL=login.css.map */
