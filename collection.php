@@ -26,11 +26,11 @@ switch ($sort) {
         $orderBy = "carte.rarity DESC, carte.name ASC"; // <-- tri par défaut
 }
 
-
 // Récupération des cartes de l'utilisateur avec amount > 0
 try {
+    // Récupérer les cartes de l'utilisateur
     $stmt = $pdo->prepare("
-        SELECT user_collection.card_id, carte.id, carte.rarity, carte.name, user_collection.amount 
+        SELECT user_collection.card_id, carte.id, carte.rarity, carte.name, carte.size, user_collection.amount 
         FROM user_collection 
         INNER JOIN carte ON user_collection.card_id = carte.id 
         WHERE user_collection.user_id = :user_id
@@ -39,18 +39,31 @@ try {
     ");
     $stmt->execute(['user_id' => $_SESSION['user_id']]);
     $cartes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Récupérer le nombre total de cartes dans la base
+    $stmtCount = $pdo->query("SELECT COUNT(*) FROM carte");
+    $total_cards = $stmtCount->fetchColumn();
+
 } catch (PDOException $e) {
     die("Erreur lors de la récupération des cartes : " . $e->getMessage());
 }
 ?>
 
-<section class=".container-collection">
+<section class="container-collection">
     <div class="header-collection">
-        <h1>Ma Collection</h1>
+        <h1>Collection</h1>
         <a class="filter" href="?sort=rarity&order=<?= ($sort === 'rarity' && $order === 'ASC') ? 'desc' : 'asc' ?>">Rareté</a>
         <a class="filter" href="?sort=size&order=<?= ($sort === 'size' && $order === 'ASC') ? 'desc' : 'asc' ?>">Taille</a>
     </div>
 
+    <div class="collection-number">
+        <?php
+        // Compter le nombre de cartes différentes de l'utilisateur (amount > 0)
+        $number_unique_cards = count($cartes);
+        echo "<h2>$number_unique_cards/$total_cards</h2>";
+        ?>
+    </div>
+    
     <ul class="list-cards">
         <?php if (count($cartes) > 0): ?>
             <?php foreach ($cartes as $carte): ?>

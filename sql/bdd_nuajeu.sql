@@ -42,7 +42,7 @@ CREATE TABLE `carte` (
 INSERT INTO `carte` (`id`, `name`, `rarity`, `category`, `size`) VALUES
 (1, 'chemtrail', 'common', '?', 2000),
 (2, 'nebuleuse', 'secret', 'espace', 2e17),
-(3, 'nuage?', 'rare', '?', 1.5),
+(3, 'nuage_', 'rare', '?', 1.5),
 (4, 'nuage_craftmine', 'rare', 'nuajeux videos', 1000),
 (5, 'nuage_de_fumee', 'rare', 'humeur', 800),
 (6, 'nuage_de_mots', 'common', 'nuajeu de mots', 1),
