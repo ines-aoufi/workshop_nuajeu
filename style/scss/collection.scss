@@ -4,25 +4,37 @@ img{
 }
 
 h1{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    text-align: left;
 }
+
+.collection-number>h2{
+    margin: 0;
+    padding: 0;
+}
+
 
 .header-collection{
     align-self: flex-start;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 10px;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
 }
 
 .container-collection{
-    background-color: var(--color-white);
-    width: 90%;
+    background-color: var(--color-white) !important;
+    width: 80%;
     border-radius: 10px;
     padding: 40px;
-    margin-top: 10px !important;
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 80vh;
 }
 
 .list-cards{
@@ -40,6 +52,20 @@ h1{
         grid-template-columns: 30% 30% 30%;
         column-gap: 5%;
     }
+
+    h1{
+    position: relative;
+    bottom: 25px;
+    right: 20px;
+
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+    background-color: var(--color-blue);
+    padding: 30px 40px 20px 10px;
+    border-radius: 5px;
+    }
 }
 
 @media (width <= 600px) {
@@ -47,7 +73,7 @@ h1{
         column-gap: 6%;
         grid-template-columns: 47% 47%;
     }
-    .container {
+    .container-collection {
         padding: 20px;
         padding-bottom: 100px;
     }
