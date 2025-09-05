@@ -19,11 +19,11 @@ include 'includes/functions.php';
     <button type="submit" id="btnouvrir">Ouvrir</button>
 </form>
 
-    <div id="cards" style="display:none;">
+    <div id="cards" style="display:none;width : 50%; margin : 0 auto; background-color: white; padding: 20px; border-radius: 10px; text-align: center;">
         <?php if (!empty($booster)): ?>
             <ul>
                 <?php foreach ($booster as $carte): ?>
-                    <li><img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>" style="width: 100px !important; height: 140px !importa;"></li>
+                    <li><img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>" style="width: 200px !important"></li>
                 <?php endforeach; ?>
             </ul>
             <button class="btnfermer">Fermer</button>

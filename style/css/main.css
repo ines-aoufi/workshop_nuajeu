@@ -112,5 +112,9 @@ body {
     transform: translateX(0);
   }
 }
+.logo__main {
+  margin: 0 auto !important;
+  margin-top: 50px !important;
+}
 
 /*# sourceMappingURL=main.css.map */

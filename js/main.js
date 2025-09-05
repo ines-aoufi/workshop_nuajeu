@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach((card) => {
       card.style.top =
-        boosterRect.top + boosterRect.height / 2 - rowRect.top + "px";
+        boosterRect.top + boosterRect.height / 1.2 - rowRect.top + "px";
       card.style.left =
-        boosterRect.left + boosterRect.width / 2 - rowRect.left + "px";
+        boosterRect.left + boosterRect.width / 1.2 - rowRect.left + "px";
       card.style.transform = "translate(-50%, -50%) scale(0.5)";
       card.style.opacity = 0;
       card.style.position = "absolute";

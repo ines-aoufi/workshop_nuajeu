@@ -40,45 +40,7 @@ try {
 
 <h1 style="margin-top: 50px; text-align: center;">Bonjour, <?php echo htmlspecialchars($username); ?></h1>
 
-<!-- Carte aléatoires du joueur -->
-<div class="cards-row hidden-cards">
-    <?php foreach ($cartes as $carte): ?>
-        <div class="card">
-            <img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>">
-        </div>
-    <?php endforeach; ?>
-</div>
-
-<div class="container__index">
-    <div class="booster-wrapper">
-        <img src="assets/images/booster-pokemon.png" alt="Booster Pokémon" class="booster">
-        <img src="assets/images/etoile-blanche.png" alt="Étoile blanche" class="etoile">
-    </div>
-</div>
-
-<style>
-    .cards-row {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-        position: relative;
-        height: 0;
-    }
-
-    .cards-row .card {
-        width: 150px;
-        opacity: 0;
-        transition: all 0.6s ease;
-    }
-
-    .cards-row.show .card {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-        position: relative;
-        /* les cartes se placent côte à côte */
-    }
-</style>
+    <img src="./assets/images/logo_blanc.png" alt="Booster Pokémon" class="logo logo__main">
 
 
 <?php
