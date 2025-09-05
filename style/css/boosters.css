@@ -1,3 +1,120 @@
+.booster {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  animation: shake 1.4s infinite;
+  transform-origin: center;
+  transition: opacity 0.5s;
+}
+.booster:hover {
+  cursor: pointer;
+}
 
+#btnouvrir, .btnfermer {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-size: 1.4rem;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#btnouvrir:hover, .btnfermer:hover {
+  background-color: #8e44ad;
+  cursor: pointer;
+}
+
+#btnouvrir {
+  top: 75%;
+  left: 50%;
+}
+
+.btnfermer {
+  top: 85%;
+  left: 50%;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__index {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.booster-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+.etoile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0; /* commence invisible */
+  height: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* pour que le click passe au booster */
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  5% {
+    transform: rotate(-3deg) translateX(-3px);
+  }
+  10% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  15% {
+    transform: rotate(-3deg) translateX(-3px);
+  }
+  20% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  25% {
+    transform: rotate(0deg) translateX(0);
+  }
+  /* pause */
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+@keyframes shake-fast {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .booster {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=boosters.css.map */
