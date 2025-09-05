@@ -1,7 +1,7 @@
 .booster {
- margin-bottom: 1rem;
- border-radius: 10px;
- display: block;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  display: block;
   margin: 0 auto;
   animation: shake 1.4s infinite;
   transform-origin: center;
@@ -9,36 +9,36 @@
 
   &:hover {
     cursor: pointer;
-}
+  }
 }
 
 #btnouvrir, .btnfermer {
- padding: 0.5rem 1rem;
- background-color: var(--color-purple);
- color: var(--color-white);
- font-weight: bold;
- border-radius: 10px;
- box-shadow: none;
- border: none;
- font-size: 1.4rem;
- position: fixed;
- transform: translate(-50%, -50%);
- transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  font-size: 1.4rem;
 
- &:hover{
-     background-color: #8e44ad;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover{
+    background-color: #8e44ad;
     cursor: pointer;
- }
+  }
 }
 
 #btnouvrir {
- top: 75%;
- left: 50%;
+  top: 75%;
+  left: 50%;
 }
 
 .btnfermer{
- top: 85%;
- left: 50%;
+  top: 85%;
+  left: 50%;
 }
 
 .container{
@@ -50,14 +50,17 @@
 }
 
 .container__index{
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
   width: 100%;
 }
 
 .booster-wrapper {
   position: relative;
   width: 100%;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
 }
 
 .etoile {
@@ -72,6 +75,12 @@
   transition: all 0.5s ease-out;
 }
 
+#cards{
+  width: 80% !important;
+  margin: 0 auto;
+  margin-top: 30px !important;
+  margin-bottom: 20vh;
+}
 
 #cards ul {
   list-style-type: none;
@@ -83,6 +92,7 @@
   justify-content: center;
   gap: 10px;
 }
+
 
 @keyframes shake {
   0%   { transform: rotate(0deg) translateX(0); }
@@ -107,7 +117,11 @@
 
 @media screen and (max-width: 768px) {
   .booster {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
+  }
+  booster-wrapper {
+    width: 90%;
   }
 
 }

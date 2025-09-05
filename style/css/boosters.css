@@ -12,6 +12,7 @@
 }
 
 #btnouvrir, .btnfermer {
+  align-self: center;
   padding: 0.5rem 1rem;
   background-color: var(--color-purple);
   color: var(--color-white);
@@ -20,8 +21,6 @@
   box-shadow: none;
   border: none;
   font-size: 1.4rem;
-  position: fixed;
-  transform: translate(-50%, -50%);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 #btnouvrir:hover, .btnfermer:hover {
@@ -48,14 +47,17 @@
 }
 
 .container__index {
-  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
   width: 100%;
 }
 
 .booster-wrapper {
   position: relative;
   width: 100%;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
 }
 
 .etoile {
@@ -68,6 +70,13 @@
   pointer-events: none; /* pour que le click passe au booster */
   opacity: 0;
   transition: all 0.5s ease-out;
+}
+
+#cards {
+  width: 80% !important;
+  margin: 0 auto;
+  margin-top: 30px !important;
+  margin-bottom: 20vh;
 }
 
 #cards ul {
@@ -124,7 +133,11 @@
 }
 @media screen and (max-width: 768px) {
   .booster {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
+  }
+  booster-wrapper {
+    width: 90%;
   }
 }
 

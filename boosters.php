@@ -9,26 +9,27 @@ include 'includes/header.php';
 <?php
 include 'includes/functions.php';
 ?>
+
 <form id="boosterForm" method="POST">
     <div class="container__index">
         <div class="booster-wrapper">
             <input class="booster" type="image" src="./assets/images/booster.png" alt="Ouvrir">
             <img src="assets/images/etoile-blanche.png" alt="Étoile blanche" class="etoile">
         </div>
+        <button type="submit" id="btnouvrir">Ouvrir</button>
     </div>
-    <button type="submit" id="btnouvrir">Ouvrir</button>
 </form>
 
-    <div id="cards" style="display:none;width : 50%; margin : 0 auto; background-color: white; padding: 20px; border-radius: 10px; text-align: center;">
-        <?php if (!empty($booster)): ?>
-            <ul>
-                <?php foreach ($booster as $carte): ?>
-                    <li><img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>" style="width: 200px !important"></li>
-                <?php endforeach; ?>
-            </ul>
-            <button class="btnfermer">Fermer</button>
-        <?php endif; ?>
-    </div>
+<div id="cards" style="display:none; width : 50%; margin : 0 auto; background-color: white; padding: 20px; border-radius: 10px; text-align: center;">
+    <?php if (!empty($booster)): ?>
+        <ul>
+            <?php foreach ($booster as $carte): ?>
+                <li><img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>" style="width: 90% !important"></li>
+            <?php endforeach; ?>
+        </ul>
+        <button class="btnfermer">Fermer</button>
+    <?php endif; ?>
+</div>
 
 
 <script>
