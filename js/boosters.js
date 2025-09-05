@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (
-    window.location.pathname.includes("boosters.php") &&
-    window.matchMedia("(min-width: 768px)").matches
-  ) {
-    document.body.style.overflowY = "hidden";
-  }
+  // if (
+  //   window.location.pathname.includes("boosters.php") &&
+  //   window.matchMedia("(min-width: 768px)").matches
+  // ) {
+  //   document.body.style.overflowY = "hidden";
+  // }
 
   const booster = document.querySelector(".booster");
   const etoile = document.querySelector(".etoile");

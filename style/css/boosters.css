@@ -83,10 +83,7 @@
   list-style-type: none;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
   gap: 10px;
 }
 
@@ -131,13 +128,30 @@
     transform: translateX(0);
   }
 }
+.cards-img {
+  width: 70% !important;
+}
+
 @media screen and (max-width: 768px) {
   .booster {
     width: 70%;
     margin: 0 auto;
   }
+  .cards-img {
+    width: 90% !important;
+  }
   booster-wrapper {
     width: 90%;
+  }
+  #cards ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #cards {
+    margin-bottom: 15vh !important;
   }
 }
 

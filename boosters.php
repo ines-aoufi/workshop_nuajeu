@@ -24,7 +24,7 @@ include 'includes/functions.php';
     <?php if (!empty($booster)): ?>
         <ul>
             <?php foreach ($booster as $carte): ?>
-                <li><img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>" style="width: 90% !important"></li>
+                <li><img src="./assets/images/<?= htmlspecialchars($carte['name']) ?>.png" alt="<?= htmlspecialchars($carte['name']) ?>" class="cards-img"></li>
             <?php endforeach; ?>
         </ul>
         <button class="btnfermer">Fermer</button>
