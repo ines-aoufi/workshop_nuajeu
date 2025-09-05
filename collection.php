@@ -44,7 +44,7 @@ try {
 }
 ?>
 
-<section class="container">
+<section class=".container-collection">
     <div class="header-collection">
         <h1>Ma Collection</h1>
         <a class="filter" href="?sort=rarity&order=<?= ($sort === 'rarity' && $order === 'ASC') ? 'desc' : 'asc' ?>">Rareté</a>
