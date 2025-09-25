@@ -35,12 +35,6 @@ body {
   justify-content: center;
 }
 
-.container__index {
-  display: block;
-  margin-top: 50px;
-  width: 100%;
-}
-
 .booster-wrapper {
   position: relative;
   width: 100%;
@@ -113,8 +107,8 @@ body {
   }
 }
 .logo__main {
-  margin: 0 auto !important;
-  margin-top: 50px !important;
+  margin: 50px auto 0 auto !important;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

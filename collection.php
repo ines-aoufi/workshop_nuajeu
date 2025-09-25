@@ -43,15 +43,22 @@ try {
     // Récupérer le nombre total de cartes dans la base
     $stmtCount = $pdo->query("SELECT COUNT(*) FROM carte");
     $total_cards = $stmtCount->fetchColumn();
-
 } catch (PDOException $e) {
     die("Erreur lors de la récupération des cartes : " . $e->getMessage());
 }
+
+// Compter le nombre de cartes totales (non uniques) et le nombre de boosters ouverts
+$total_cards_non_unique = 0;
+foreach ($cartes as $carte) {
+    $total_cards_non_unique += $carte['amount'];
+}
+$boosters_opened = $total_cards_non_unique / 3;
+
 ?>
 
 <section class="container-collection">
     <div class="header-collection">
-        <h1>Collection</h1>
+        <h1 class="title-collection">Collection</h1>
         <a class="filter" href="?sort=rarity&order=<?= ($sort === 'rarity' && $order === 'ASC') ? 'desc' : 'asc' ?>">Rareté</a>
         <a class="filter" href="?sort=size&order=<?= ($sort === 'size' && $order === 'ASC') ? 'desc' : 'asc' ?>">Taille</a>
     </div>
@@ -61,9 +68,17 @@ try {
         // Compter le nombre de cartes différentes de l'utilisateur (amount > 0)
         $number_unique_cards = count($cartes);
         echo "<h2>$number_unique_cards/$total_cards</h2>";
+
+        if ($boosters_opened == 1) {
+            echo "<h2>$boosters_opened booster ouvert</h2>";
+        } elseif ($boosters_opened < 1) {
+            echo "<h2>Pas de boosters ouverts</h2>";
+        } else {
+            echo "<h2><strong>$boosters_opened</strong> boosters ouverts</h2>";
+        }
         ?>
     </div>
-    
+
     <ul class="list-cards">
         <?php if (count($cartes) > 0): ?>
             <?php foreach ($cartes as $carte): ?>

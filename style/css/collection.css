@@ -3,7 +3,7 @@ img {
   border-radius: 3%;
 }
 
-h1 {
+.title-collection {
   margin: 0;
   padding: 0;
   text-align: left;
@@ -50,7 +50,7 @@ h1 {
     grid-template-columns: 30% 30% 30%;
     column-gap: 5%;
   }
-  h1 {
+  .title-collection {
     position: relative;
     bottom: 25px;
     right: 20px;
